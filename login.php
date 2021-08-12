@@ -1,3 +1,40 @@
+<?php
+ob_start();
+session_start();
+	
+	$error = NULL;
+
+	if($_SERVER["REQUEST_METHOD"] == "POST") {
+		require 'musicdatabase_database_mysqli.php';
+		//username and password sent from form
+		$myusername = mysqli_real_escape_string($conn, $_POST['username']);
+		$mypassword = mysqli_real_escape_string($conn, $_POST['password']);
+		
+		$query1 = "SELECT User FROM Admin WHERE User = '".$myusername."' and Password = '".$mypassword."'";
+		$query2 = "SELECT User FROM User WHERE User = '".$myusername."' and Password = '".$mypassword."'";
+
+		$result1 = mysqli_query($conn, $query1);
+		$result2 = mysqli_query($conn, $query2);
+
+		$count1 = mysqli_num_rows($result1);
+		$count2 = mysqli_num_rows($result2);
+
+		// If result matched $myusername and $mypassword, table row must be 1 row
+		if($count1 == 1 and $myusername !== '' and $mypassword !== '') {
+			$_SESSION['login_user'] = $myusername;
+			$_SESSION['user_type'] = 'user';
+			header("location: homepage_for_admin.php");
+		} else if($count2 == 1 and $myusername !== '' and $mypassword !== '') {
+			$_SESSION['login_user'] = $myusername;
+			$_SESSION['user_type'] = 'admin';
+			header("location: homepage.php");
+		} else if($myusername !== '' and $mypassword !== '') {
+			$error = "Your username or password is incorrect";
+		}
+	}
+ob_end_flush();
+?>
+
 <!DOCTYPE html>
 <html lang = "en">
 	<head>
