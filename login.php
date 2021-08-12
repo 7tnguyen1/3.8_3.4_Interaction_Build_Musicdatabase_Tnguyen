@@ -1,72 +1,39 @@
 <!DOCTYPE html>
 <html lang = "en">
 	<head>
-		<title>Homepage</title>
+		<title>Login</title>
 		<meta chrset="utf-8"/>
 		<meta name="Keywords" content = "html5, layout, CSS Grid System"/>
 		<meta name = "Author" content = "Tony Nguyen"/>
 		<meta name = "Description" content = "CSS Grid System Layout Tutorial"/>
 		<meta name = "viewport" content = "width=device-width. initial-scale=1"/>
 		
-		<link rel ="stylesheet" href = "style5.css"> 
+		<link rel ="stylesheet" href = "style7.css"> 
 		
 	</head>
 <body>
 	<div class ="grid-container">
 		<div class="navigation">
 			<div class="logo">
-				<a href = "homepage.php"><img src = "images/logo8.png" height = "100"></a>
+				<a href = "#"><img src = "images/logo8.png" height = "100"></a>
 			</div>
-			<nav>
-				<ul>
-					<li><a href = "homepage.php">Home</a></li>
-					<li><a href = "musicplayer.php">Music Play</a>
-						<ul>
-							<li><a href= "Query1.php">Query1</a></li>
-							<li><a href= "Query2.php">Query2</a></li>
-						</ul>
-					</li>
-					<li><a href = "login.php">Contact</a></li>
-					<li><a href = "login.php">LoginOut</a></li>
-					<li><a href = "signup.php">SignUp</a></li>
-				</ul>
-			</nav>
+			<?php
+				//Pulls the links from the nav.php page and places them in the navigation div
+				require 'nav_login.css'; //'require' is 100% needed for the site to run 
+			?>
 		</div>
-		<div class="img_1">
-			<img src = "images/banner.jpg">
+		<div class="content"><!-- Holds the main page content -->
+			<p>Welcome to Music MP3</p>
+			<h3><form method = "post" id = "01_login">
+			<input id="us" type = "text" name = "username" placeholder="User name"/><br />
+			<input id="pa" type = 'password' name = 'password' placeholder="Password"/><br />
+			<input  id="login" type = "submit" value = "login"/><br />
+			<a href = "Update_user.php" id='update'>Forgot your password?</a>
+			<p class = "error" id="er"><?php echo $error; ?></p>
+			</form></h3>
 		</div>
-		<div class="content_1"><!-- Holds the main page content -->
-			<h1>Welcome to MUSIC MP3</h1>
-			<p>MUSIC MP3 is a free music player application. With a high-quality music store, you will have a great music experience.</p>
-			<p>Digital music service with millions of high quality copyrighted songs , helping you listen to music, download music, upload and sync my music store on multiple devices.</p>
-		</div>
-		<div class="content_4">
-			<Space></Space>
-			<div class="images1">
-				<a href = "homepage.php"><img src = "images/img.png"></a>
-			</div>
-			<div class="images2">
-				<a href = "homepage.php"><img src = "images/img.png"></a>
-			</div>
-			<div class="images3">
-				<a href = "homepage.php"><img src = "images/img.png"></a>
-			</div>
-			<div class="images4">
-				<a href = "homepage.php"><img src = "images/img.png"></a>
-			</div>
-			<Space></Space>
-			<div class="images5">
-				<a href = "homepage.php"><img src = "images/img.png"></a>
-			</div>
-			<div class="images6">
-				<a href = "homepage.php"><img src = "images/img.png"></a>
-			</div>
-			<div class="images7">
-				<a href = "homepage.php"><img src = "images/img.png"></a>
-			</div>
-			<div class="images8">
-				<a href = "homepage.php"><img src = "images/img.png"></a>
-			</div>
+		<div class="img_2">
+			<img src = "images/img2.jpg">
 		</div>
 		<div class = "footer">&copy; Copyright Tony Nguyen 2021</div>
 	</div>
