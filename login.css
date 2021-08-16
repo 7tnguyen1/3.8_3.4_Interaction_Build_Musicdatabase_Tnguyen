@@ -31,7 +31,7 @@ ul{
 }
 
 li{
-	float:left;
+	float:right;
 }
 
 .logo img{
@@ -91,24 +91,34 @@ nav a:hover{
 	padding-top:20px;
 }
 
+h3{
+	margin-left:130px;
+	margin-top:30px;
+	
+}
 
 p{
-	font-size:14px;
+	margin-left:130px;
+	margin-top:250px;
+	font-size:24px;
 }
 
 #us{
 	height:30px;
+	width: 240px;
+
 }
 
 #pa{
 	height:30px;
 	width: 240px;
+
 }
 
+/* Set up the login buttom*/
 #login{
 	height:25px;
 	width: 80px;
-	color:black;
 }
 
 .Connected{
