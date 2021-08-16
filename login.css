@@ -2,60 +2,27 @@ body{
 	margin:0;
 	padding:0;
 	background:white;
-	overflow: scroll;
-	overflow-x: hidden;	
 }
 
 .grid-container{
 	display: grid;
-	grid-template-columns: 15% 35% 50%;
-	grid-template-rows: auto auto auto auto ;
+	grid-template-columns: 35% 15% 50%;
+	grid-template-rows: 58px auto auto;
 	height: 100vh;
-}
-
-.img_1{
-	grid-column-start: 1;
-	grid-column-end: span 4;
-	height:300px;
-	background:red;
-}
-
-.img_1 img{
-	display:block;
-	margin-left:auto;
-	margin-right:auto;
-	height:300px;
-	width:100%;
-}
-
-.footer{
-	background-color: black;
-	grid-column-end: span 4;
-	padding-top:25px;
-	text-align: center;
-	color:black;
-	height:50px;
-	color:white;
 }
 
 .navigation{
 	box-sizing: border-box;
-	grid-columns-start: 1;
+	grid-column-start: 1;
 	grid-column-end: span 4;
-	margin-top:-10px;
-	height:60px;
-	background-color:red;
 }
 
 
 nav{
 	width:100%;
-	background:white;
+	background-color:white;
 	overflow:auto;
-	position: static;
-	
 }
-
 
 ul{
 	padding:0;
@@ -64,9 +31,13 @@ ul{
 }
 
 li{
-	float:right;
+	float:left;
 }
 
+.logo img{
+	position:absolute;
+	margin-top:-20px;
+}
 
 nav a{
 	display:block;
@@ -79,61 +50,54 @@ nav a{
 }
 
 nav a:hover{
-	background:purple;
+	background:black;
 	transition:0.5s;
+	color:white;
 }
 
-.content_1{
-	background-color: white;
-	grid-column-start: 1;
-	grid-column-end: span 4;
-	z-index: 2;	
-	height: 100px;
-	border: 2px solid red;
-}
 
-.section3{
-	background-color: white;
-	width: 400px;
-	height: 300px;
-	padding: 10px;
-	position: absolute;
-	top: 550px;
-	left: 35%;
-	z-index: 4;
-}
+
 
 .content{
 	background-color: white;
-	z-index: 2;
+	z-index:4;
 	height:680px;
 	grid-column-start: 1;
-	grid-column-end: span 4;
-}
-
-.section3 h3{
-	margin-left:80px;
-	margin-top:30px;
+	grid-column-end: span 1;
 	
 }
 
-.section3 p{
-	margin-left:90px;
-	margin-top:70;
-	font-size:24px;
-	font-weight: bold;
+
+.img_2{
+	background-color: green;
+	z-index: 2;
+	height:680px;
+	grid-column-start: 2;
+	grid-column-end: span 4;
 }
 
+.img_2 img{
+	height:680px;
+	width:100%;
+}
+
+.footer{
+	background-color: white;
+	grid-column-start: 1;
+	grid-column-end: span 4;
+	text-align: center;
+	height:35px;
+	color:black;
+	padding-top:20px;
+}
+
+
 p{
-	margin-left:90px;
-	margin-top:70;
 	font-size:14px;
-	font-weight: bold;
 }
 
 #us{
 	height:30px;
-	width: 240px;
 }
 
 #pa{
@@ -144,4 +108,39 @@ p{
 #login{
 	height:25px;
 	width: 80px;
+	color:black;
+}
+
+.Connected{
+	font-size:18px;
+	font-weight: bold;
+	position: absolute;
+  	top: 230px;
+	left:0px;
+}
+
+.error{
+	font-size:18px;
+	color:red;
+	font-weight: bold;
+	position: absolute;
+  	top: 240px;
+}
+
+a{
+	color:black;
+	font-size:18px;
+	text-decoration:none;
+}
+
+
+.a{
+	color:black;
+	font-size:12px;
+	text-decoration:none;
+}
+
+#er{
+	left:0px;
+	font-size:14px;
 }
