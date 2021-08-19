@@ -8,7 +8,7 @@
 		<meta name = "Description" content = "CSS Grid System Layout Tutorial"/>
 		<meta name = "viewport" content = "width=device-width. initial-scale=1"/>
 		
-		<link rel ="stylesheet" href = "login.css"> 
+		<link rel ="stylesheet" href = "index.css"> 
 		
 	</head>
 <body>
@@ -17,10 +17,12 @@
 			<div class="logo">
 				<a href = "#"><img src = "images/logo8.png" height = "100"></a>
 			</div>
-			<?php
-				//Pulls the links from the nav.php page and places them in the navigation div
-				require 'nav_login.php'; //'require' is 100% needed for the site to run 
-			?>
+			<nav>
+				<ul>
+					<li><a href = "login.php">Login</a></li>
+					<li><a href = "signup.php">SignUp</a></li>
+				</ul>
+			</nav>
 		</div>
 		<div class="content"><!-- Holds the main page content -->
 			<p>Welcome to Music MP3</p>
