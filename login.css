@@ -61,6 +61,21 @@ ul li ul{
 	width: 100px;
 	display: none;
 	visibility: hidden;
+
+}
+	
+ul li ul li{
+	background-color: #0C59CF;
+	display: block;
+	
+	
+}
+
+ul li ul li:hover{background: black;}
+
+ul li:hover ul{
+	display: block;
+	visibility: visible;
 }
 
 /* Set up position for content div to hold the login function */
@@ -88,7 +103,7 @@ ul li ul{
 }
 /* Set up the footer */
 .footer{
-	background-color: #0C59CF;
+	background-color:#0C59CF;
 	grid-column-start: 1;
 	grid-column-end: span 4;
 	text-align: center;
