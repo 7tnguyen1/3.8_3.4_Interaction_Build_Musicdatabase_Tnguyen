@@ -22,7 +22,7 @@ body{
 
 nav{
 	width:100%;
-	background-color:#C8A2C8;
+	background-color:#0C59CF;
 	overflow:auto;
 }
 
@@ -48,7 +48,7 @@ nav a{
 	padding: 20px 15px;
 	text-decoration:none;
 	font-family:Arial;
-	color:black;
+	color:white;
 	text-align: center;
 }
 
@@ -88,12 +88,12 @@ ul li ul{
 }
 /* Set up the footer */
 .footer{
-	background-color: #C8A2C8;
+	background-color: #0C59CF;
 	grid-column-start: 1;
 	grid-column-end: span 4;
 	text-align: center;
 	height:35px;
-	color:black;
+	color:white;
 	padding-top:20px;
 }
 
@@ -110,7 +110,7 @@ p{
 	margin-left:130px;
 	margin-top:250px;
 	font-size:24px;
-	color:black;
+	color:#0C59CF;
 	font-weight:bold;
 }
 
@@ -129,7 +129,7 @@ p{
 	height:25px;
 	width: 80px;
 	color:white;
-	background-color:black;
+	background-color:#0C59CF;
 	
 }
 
