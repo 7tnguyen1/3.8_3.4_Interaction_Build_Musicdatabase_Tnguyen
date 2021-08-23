@@ -61,20 +61,10 @@ ob_end_flush();
 			<div class="logo">
 				<a href = "#"><img src = "images/logo8.png" height = "100"></a>
 			</div>
-			<!--nav for User page -->
-			<nav>
-				<ul>
-					<li><a href = "homepage.php">Home</a></li>
-					<li><a href = "musicplayer.php">Music Play</a>
-						<ul>
-							<li><a href= "Song_sort_Title.php">Title</a></li>
-							<li><a href= "Song_sort_Genre.php">Genre</a></li>
-						</ul>
-					</li>
-					<li><a href = "login.php">LoginOut</a></li>
-					<li><a href = "signup.php">SignUp</a></li>
-				</ul>
-			</nav>
+			<?php
+				//Pulls the links from the nav_login.php page and places them in the navigation div
+				require 'nav_login.php'; //'require' is 100% needed for the site to run 
+			?>
 		</div>
 		<div class="content"><!-- Holds the login form -->
 			<p>Welcome to Music MP3</p>
