@@ -1,0 +1,172 @@
+/* Import  font from google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+body{
+	margin:0;
+	padding:0;
+	background:white;
+}
+
+/* Set up position for the nav */
+.grid-container{
+	display: grid;
+	grid-template-columns: 35% 15% 50%;
+	grid-template-rows: 58px auto auto;
+	height: 100vh;
+}
+
+.navigation{
+	box-sizing: border-box;
+	grid-column-start: 1;
+	grid-column-end: span 4;
+}
+
+
+nav{
+	width:100%;
+	background-color: #0C59CF;
+	overflow:auto;
+	
+}
+
+ul{
+	padding:0;
+	margin:0 0 0 150px;
+	list-style: none;
+}
+/* Set up position for the text in nav to the right */
+li{
+	float:right;
+}
+
+
+/* Set up Drop down menu for */
+nav a{
+	display:block;
+	width:100px;
+	padding: 20px 15px;
+	text-decoration:none;
+	font-family:Arial;
+	color:white;
+	text-align: center;
+}
+
+nav a:hover{
+	background:black;
+	transition:0.5s;
+}
+
+ul li ul{
+	padding: 0;
+	position: absolute;
+	top: 58px;
+	left: 1043px;
+	width: 100px;
+	display: none;
+	visibility: hidden;
+	z-index: 5;
+}
+
+ul li #a{
+	padding: 0;
+	position: absolute;
+	top: 58px;
+	left: 1173px;
+	width: 100px;
+	display: none;
+	visibility: hidden;
+	z-index: 5;
+}
+
+	
+ul li ul li{
+	background-color:  #0C59CF;
+	display: block;
+}
+
+ul li ul li:hover{background: black;}
+
+ul li:hover ul{
+	display: block;
+	visibility: visible;
+}
+
+ul li:hover #a{
+	display: block;
+	visibility: visible;
+}
+
+/* Set up position for the logo */
+.logo img{
+	position:absolute;
+	margin-top:-20px;
+}
+
+
+/* Set up location for the div that use to disolay User and Password for User table*/
+.content{
+	background-color: white;
+	z-index: 2;
+	height:800px;
+	grid-column-start: 1;
+	grid-column-end: span 4;
+}
+
+
+
+.section3{
+	background-color: white;
+	width: 400px;
+	height: 300px;
+	padding: 10px;
+	position: absolute;
+	top: 130px;
+	left: 35%;
+	z-index: 4;
+}
+
+/* Set up the footer */
+.footer{
+	background-color: blue;
+	grid-column-end: span 4;
+	padding-top:25px;
+	text-align: center;
+	color:black;
+	height:50px;
+	color:white;
+}
+
+h3{
+	margin-left:80px;
+	margin-top:30px;
+	
+}
+
+p{
+	margin-left:90px;
+	margin-top:120px;
+	font-size:24px;
+	color:blue;
+	font-weight: bold;
+}
+
+#us{
+	height:30px;
+	width: 240px;
+}
+
+#pa{
+	height:30px;
+	width: 240px;
+}
+
+#login{
+	height:25px;
+	width: 80px;
+	color:white;
+	background-color:blue;
+}
+
+
