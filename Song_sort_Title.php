@@ -12,7 +12,8 @@
 <!DOCTYPE html>
 <html lang = "en">
 	<head>
-		<title>Sort for query1</title>
+		<title>Sort By Title</title>
+		<meta chrset="utf-8"/>
 		<meta name="Keywords" content = "html5"/>
 		<meta name = "Author" content = "Tony Nguyen"/>
 		<meta name = "Description" content = "Music database"/>
@@ -22,7 +23,7 @@
 		
 	</head>
 <body>
-	<!--Set for grid system for the page -->
+	<!--Set grid system for the page -->
 	<div class ="grid-container">
 		<!-- The div for nav and in the div it contain the logo and a function to called the nav -->
 		<div class="navigation">
@@ -31,8 +32,8 @@
 				<a href = "#"><img src = "images/logo8.png" height = "100"></a>
 			</div>
 			<?php
-				//Pulls the links from the nav_admin.php page and places them in the navigation div
-				require 'nav_admin.php'; //'require' is 100% needed for the site to run 
+				//Pulls the links from the nav_normal.php page and places them in the navigation div
+				require 'nav_normal.php'; //'require' is 100% needed for the site to run 
 			?>
 		</div>
 		<!-- Div that holds the banner -->
@@ -70,11 +71,11 @@
 			<h3>Artist</h3>
 			<h3>Genre</h3>
 			<h3>Duration</h3>
-			<h3>Size</h3>				
+			<h3>Size</h3>
 		</div>
 		<div class="content_4">
 			<?php
-			//Called up all data to display in the page and information of each column is place underneath their title
+				//Called up all data to display in the page and information of each column is place underneath their title
 				require "musicdatabase_database_mysqli.php";
 					
 				$query = ("SELECT s.`Title`, GROUP_CONCAT(DISTINCT a.`Artist` 
