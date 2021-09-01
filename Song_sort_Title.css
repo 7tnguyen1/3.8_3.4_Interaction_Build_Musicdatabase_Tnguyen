@@ -1,0 +1,155 @@
+body{
+	margin:0;
+	padding:0;
+	background:white;
+	overflow: scroll;
+	overflow-x: hidden;	
+}
+
+.grid-container{
+	display: grid;
+	grid-template-columns: 15% 35% 50%;
+	grid-template-rows: 58px auto auto auto;
+	height: 100vh;
+}
+
+.navigation{
+	box-sizing: border-box;
+	grid-column-start: 1;
+	grid-column-end: span 4;
+}
+
+
+nav{
+	width:100%;
+	background:blue;
+	overflow:auto;
+}
+
+ul{
+	padding:0;
+	margin:0 0 0 150px;
+	list-style: none;
+}
+
+li{
+	float:left;
+}
+
+
+nav a{
+	display:block;
+	width:100px;
+	padding: 20px 15px;
+	text-decoration:none;
+	font-family:Arial;
+	color:white;
+	text-align: center;
+}
+
+nav a:hover{
+	background:purple;
+	transition:0.5s;
+}
+
+ul li ul{
+	padding: 0;
+	position: absolute;
+	top: 58px;
+	left: 130px;
+	width: 100px;
+	display: none;
+	visibility: hidden;
+	z-index: 1;
+
+}
+	
+ul li ul li{
+	background-color: purple;
+	display: block;
+	
+	
+}
+
+ul li ul li:hover{background: black}
+
+ul li:hover ul{
+	display: block;
+	visibility: visible;
+}
+
+.logo img{
+	position:absolute;
+	margin-top:-20px;
+}
+
+
+.img_1{
+	grid-column-start: 1;
+	grid-column-end: span 4;
+}
+
+.img_1 img{
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	height:550px;
+	width:100%;
+}
+
+.footer{
+	background-color: blue;
+	grid-column-end: span 4;
+	padding-top:25px;
+	text-align: center;
+	color:black;
+	height:50px;
+	color:white;
+}
+
+.content_1{
+	grid-column-start: 2;
+	grid-column-end: span 4;
+	background-color: white;
+	z-index: 2;
+	height:200px;
+	text-align:center;
+}
+
+
+
+
+.content_2{
+	grid-column-start: 1;
+	grid-column-end: 2;
+	background-color: red;
+	z-index: 2;
+	height:200px;
+}
+.content_2 img{
+	height:200px;
+	width:202px;
+	
+}
+
+.content_3{
+	grid-column-start: 1;
+	grid-column-end: span 4;
+	background-color: green;
+	z-index: 2;
+	height:600px;		
+}
+
+.content_3{
+	width: 100%;
+	display: grid;
+    grid-gap: 2%;
+	grid-template-columns: 2% 14% 14% 14% 14% 14% 14%;
+    grid-template-rows: 26px;
+	padding-top: 4px;
+	padding-left:5%;
+	overflow:scroll;	
+	overflow-x:scroll;
+	overflow-x: hidden;	
+}
+
