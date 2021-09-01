@@ -126,3 +126,35 @@ ul li:hover #a{
 	height:50px;
 	color:white;
 }
+
+
+
+user1{
+	color:blue;
+	margin-left:580px;
+}
+
+password1{
+	color:blue;
+	margin-left:40px;
+}
+
+section1, section2{
+	background-color: white;
+	width: 80px;
+	min-height: 30px;
+	padding: 10px 0px 15px 5px;
+	position: absolute;
+	top: 300px;
+	z-index: 3;
+	border: 2px solid #000;
+	margin-left:350px;
+}
+
+section1{
+	left: 220px;
+}
+
+section2{
+	left: 320px;
+}
