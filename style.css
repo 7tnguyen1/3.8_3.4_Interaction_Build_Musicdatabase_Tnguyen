@@ -1,3 +1,4 @@
+/* Import  font from google fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
@@ -8,6 +9,8 @@ body{
 	background:white;
 }
 
+
+/* Set up grid template columns and rows */
 .grid-container{
 	display: grid;
 	grid-template-columns: 35% 15% 50%;
@@ -24,7 +27,7 @@ body{
 
 nav{
 	width:100%;
-	background-color: white;
+	background-color: #0C59CF;
 	overflow:auto;
 	
 }
@@ -34,25 +37,25 @@ ul{
 	margin:0 0 0 150px;
 	list-style: none;
 }
-
+/* Set up position for the text in nav to the right */
 li{
 	float:right;
 }
 
 
-
+/* Set up Drop down menu for */
 nav a{
 	display:block;
 	width:100px;
 	padding: 20px 15px;
 	text-decoration:none;
 	font-family:Arial;
-	color:black;
+	color:white;
 	text-align: center;
 }
 
 nav a:hover{
-	background:purple;
+	background:black;
 	transition:0.5s;
 }
 
@@ -60,7 +63,7 @@ ul li ul{
 	padding: 0;
 	position: absolute;
 	top: 58px;
-	left: 970px;
+	left: 1043px;
 	width: 100px;
 	display: none;
 	visibility: hidden;
@@ -71,7 +74,7 @@ ul li #a{
 	padding: 0;
 	position: absolute;
 	top: 58px;
-	left: 1100px;
+	left: 1173px;
 	width: 100px;
 	display: none;
 	visibility: hidden;
@@ -80,11 +83,11 @@ ul li #a{
 
 	
 ul li ul li{
-	background-color:  white;
+	background-color:  #0C59CF;
 	display: block;
 }
 
-ul li ul li:hover{background: purple;}
+ul li ul li:hover{background: black;}
 
 ul li:hover ul{
 	display: block;
@@ -96,11 +99,13 @@ ul li:hover #a{
 	visibility: visible;
 }
 
+/* Set up position for the logo */
 .logo img{
 	position:absolute;
 	margin-top:-20px;
 }
 
+/* Set up position for content div to hold the function */
 .content{
 	background-color: white;
 	z-index:4;
@@ -124,27 +129,30 @@ ul li:hover #a{
 	width:100%
 }
 
+/* Set up the footer */
 .footer{
-	background-color: white;
+	background-color: #0C59CF;
 	grid-column-start: 1;
 	grid-column-end: span 4;
 	text-align: center;
 	height:35px;
-	color:black;
+	color:white;
 	padding-top:20px;
 }
 
+/* Re position of text in the div */
 h3{
 	margin-left:130px;
 	margin-top:30px;
 	
 }
 
+/* Re position of text in the div and change font-size, color, weight */
 p{
 	margin-left:130px;
 	margin-top:250px;
 	font-size:24px;
-	color:black;
+	color:#0C59CF;
 	font-family: 'Open Sans', sans-serif;
 	font-weight:600;
 }
@@ -161,14 +169,16 @@ p{
 	font-family: 'Open Sans', sans-serif;
 }
 
+/* Set up the login buttom*/
 #login{
 	height:25px;
 	width: 80px;
-	color:black;
-	background-color:white;
+	color:white;
+	background-color:#0C59CF;
 	font-family: 'Open Sans', sans-serif;
 }
 
+/* Set up the text display correct*/
 .Connected{
 	font-size:18px;
 	color:green;
@@ -178,6 +188,7 @@ p{
 	font-family: 'Open Sans', sans-serif;
 }
 
+/* Set up the text display error*/
 .error{
 	font-size:18px;
 	color:red;
