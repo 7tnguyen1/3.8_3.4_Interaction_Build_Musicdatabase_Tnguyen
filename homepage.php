@@ -19,12 +19,15 @@
 		<meta name = "Description" content = "Music database"/>
 		<meta name = "viewport" content = "width=device-width. initial-scale=1"/>
 		<!--Connected to css -->
-		<link rel ="stylesheet" href = "style1.css"> 
+		<link rel ="stylesheet" href = "style1.css">
 		
 	</head>
 <body>
+	<!--Set for grid system for the page -->
 	<div class ="grid-container">
+		<!-- The div for nav and in the div it contain the logo and a function to called the nav -->
 		<div class="navigation">
+			<!-- Set a div that contain logo for the music database -->
 			<div class="logo">
 				<a href = "homepage.php"><img src = "images/logo8.png" height = "100"></a>
 			</div>
@@ -33,14 +36,16 @@
 				require 'nav_admin.php'; //'require' is 100% needed for the site to run 
 			?>
 		</div>
+		<!-- Div that holds the banner -->
 		<div class="img_1">
 			<img src = "images/music-1106439_1280.jpg">
 		</div>
 		<div class="content_1"><!-- Holds the main page content -->
 			<h1>Welcome to MUSIC MP3</h1>
 			<p>MUSIC MP3 is a free music player application. With a high-quality music store, you will have a great music experience.</p>
-			<p>Digital music service with millions of high quality copyrighted songs , helping you listen to music, download music, upload and sync my music store on multiple devices.</p>
+			<p >Digital music service with millions of high quality copyrighted songs , helping you listen to music, download music, upload and sync my music store on multiple devices.</p>
 		</div>
+		<!-- Holds the Imges which all be the link to other special playlist-->
 		<div class="content_4">
 			<Space></Space>
 			<div class="images1">
@@ -97,7 +102,7 @@
 				<a href = "Query5.php"><img src = "images/Dance.jpg" class="image8"></a>
 				<!--Div for overlay techniques so that when the user hover it hide the images and display text -->
 				<div class="overlay">
-    				<div class="text"><a href = "Query5_admin.php">Dance</a></div>
+    				<div class="text"><a href = "Query5_admin">Dance</a></div>
   				</div>
 			</div>
 		</div>
