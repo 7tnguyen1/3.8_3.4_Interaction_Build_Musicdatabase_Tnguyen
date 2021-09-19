@@ -65,7 +65,7 @@
 		</div>
 		<!--Div for the image -->
 		<div class="img_2">
-			<img src = "images/img2.jpg">
+			<img src = "images/music-1106439_1280.jpg">
 		</div>
 		<!--Footer for the music database -->
 		<div class = "footer">&copy; Copyright Tony Nguyen 2021</div>
