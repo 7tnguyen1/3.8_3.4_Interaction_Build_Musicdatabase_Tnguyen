@@ -1,7 +1,18 @@
+<?php
+		// Deliver to login page if access to this page with out login
+		session_start();
+		if(!isset($_SESSION['login_user'])){
+				header("location:login.php");
+				}
+		else{
+			$User = $_SESSION['login_user'];
+		}
+?>
+
 <!DOCTYPE html>
 <html lang = "en">
 	<head>
-		<title>Update User</title>
+		<title>Update User_for_Admin</title>
 		<meta chrset="utf-8"/>
 		<meta name="Keywords" content = "html5"/>
 		<meta name = "Author" content = "Tony Nguyen"/>
@@ -21,20 +32,20 @@
 				<a href = "01_login_real.php"><img src = "images/logo8.png" height = "100"></a>
 			</div>
 			<?php
-				//Pulls the links from the nav_login.php page and places them in the navigation div
-				require 'nav_login.php'; //'require' is 100% needed for the site to run 
+				//Pulls the links from the nav_admin.php page and places them in the navigation div
+				require 'nav_admin.php'; //'require' is 100% needed for the site to run 
 			?>
 		</div>
-		<div class="content"><!-- Holds the Update User form -->
+		<div class="content"><!-- Holds the update user form -->
 			<p>Update User</p>
 			<h3><form method = "post">
 			<input id="us" type = "text" name = "username" placeholder="User name"/><br />
 			<input id="pa" type = 'password' name = 'password' placeholder="New Password"/><br />
 			<input  id="login" type = "submit" value = "Insert"/><br />
+			</form></h3>
 				<?php
 				//Connect.php (tells where to connect servername, username, password, dbaseName)
-				require "musicdatabase_database_mysqli.php";
-							
+				require "musicdatabase_database_mysqli.php";		
 				if(isset($_POST['username']) and isset($_POST['password'])) {
 					$User_ID = $_POST['username'];
 					$New_Password = $_POST['password'];
@@ -43,15 +54,14 @@
 				$updatequery = "UPDATE User SET Password = '".$New_Password."' WHERE User = '".$User_ID."'";
 				if (mysqli_query($conn,$updatequery))
 					{
-					echo "<p class = 'Connected'>Record inserted:</p>";
+					echo "<p class = 'Connected'>Record Updated:</p>";
 					}
 				else
 					{
-					echo "<p class = 'error'>Error inserting record:</p>";
+					echo "<p class = 'error'>Error Updated record:</p>";
 					}
 				}
 				?>
-			</form></h3>
 		</div>
 		<!--Div for the image -->
 		<div class="img_2">
