@@ -49,7 +49,7 @@ ob_end_flush();
 		<meta name = "Description" content = "Music database"/>
 		<meta name = "viewport" content = "width=device-width. initial-scale=1"/>
 		<!-- Connect to css page -->
-		<link rel ="stylesheet" href = "login_test.css"> 
+		<link rel ="stylesheet" href = "style7.css"> 
 		
 	</head>
 <body>
@@ -79,7 +79,7 @@ ob_end_flush();
 		</div>
 		<!--Div for the image -->
 		<div class="img_2">
-			<img src = "images/img2.jpg">
+			<img src = "images/guitarbrownbackground.jpg">
 		</div>
 		<!--Footer for the music database -->
 		<div class = "footer">&copy; Copyright Tony Nguyen 2021</div>
