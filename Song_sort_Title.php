@@ -13,6 +13,7 @@
 <html lang = "en">
 	<head>
 		<title>Sort for query1</title>
+		<meta chrset="utf-8"/>
 		<meta name="Keywords" content = "html5"/>
 		<meta name = "Author" content = "Tony Nguyen"/>
 		<meta name = "Description" content = "Music database"/>
