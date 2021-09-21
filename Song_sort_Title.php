@@ -1,128 +1,80 @@
-body{
-	margin:0;
-	padding:0;
-	background:white;
-	overflow: scroll;
-	overflow-x: hidden;	
-}
-
-.grid-container{
-	display: grid;
-	grid-template-columns: 15% 10% 75%;
-	grid-template-rows: auto auto auto auto auto;
-	height: 100vh;
-}
-
-.img_1{
-	grid-column-start: 1;
-	grid-column-end: span 4;
-	height:300px;
-	background:red;
-}
-
-.img_1 img{
-	display:block;
-	margin-left:auto;
-	margin-right:auto;
-	height:300px;
-	width:100%;
-}
-
-.footer{
-	background-color: white;
-	grid-column-end: span 4;
-	padding-top:25px;
-	text-align: center;
-	color:black;
-	height:50px;
-}
-
-.navigation{
-	box-sizing: border-box;
-	grid-column-start: 1;
-	grid-column-end: span 4;
-	margin-top:-10px;
-	height:60px;
-	background-color:red;
-}
-
-
-nav{
-	width:100%;
-	background:white;
-	overflow:auto;
-	position: static;
-	
-}
-
-
-ul{
-	padding:0;
-	margin:0 0 0 150px;
-	list-style: none;
-}
-
-li{
-	float:right;
-}
-
-
-nav a{
-	display:block;
-	width:100px;
-	padding: 20px 15px;
-	text-decoration:none;
-	font-family:Arial;
-	color:black;
-	text-align: center;
-}
-
-nav a:hover{
-	background:purple;
-	transition:0.5s;
-}
-
-.content_1{
-	background-color: white;
-	grid-column-start: 1;
-	grid-column-end: span 4;
-	z-index: 2;	
-	height: 100px;
-	border: 2px solid red;
-}
-
-
-.content_2{
-	grid-column-start: 1;
-	grid-column-end: span 1;
-	background-color: white;
-	z-index: 2;
-	height:604px;
-	border: 2px solid red;
-}
-
-
-.content_3{
-	grid-column-start: 2;
-	grid-column-end: span 4;
-	background-color:white;
-	z-index: 2;
-	height:600px;		
-}
-
-.content_3{
-	width: 100%;
-	display: grid;
-    grid-gap: 2%;
-	grid-template-columns: 2% 12% 12% 12% 12% 12% 12%;
-    grid-template-rows: 26px;
-	padding-top: 4px;
-	padding-left:5%;
-	overflow:scroll;	
-	overflow-x:scroll;
-	overflow-x: hidden;	
-}
-
-h1{
-	text-align:center;
-}
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<title>Layout1Musicplay</title>
+		<meta chrset="utf-8"/>
+		<meta name="Keywords" content = "html5, layout, CSS Grid System"/>
+		<meta name = "Author" content = "Tony Nguyen"/>
+		<meta name = "Description" content = "CSS Grid System Layout Tutorial"/>
+		<meta name = "viewport" content = "width=device-width. initial-scale=1"/>
+		
+		<link rel ="stylesheet" href = "test8.css"> 
+		
+	</head>
+<body>
+	<div class ="grid-container">
+		<div class="img_1">
+			<img src = "images/img.png">
+		</div>
+		<div class="navigation">
+			<nav>
+				<ul>
+					<li><a href = "index.html">Home</a></li>
+					<li><a href = "index.html">Music Play</a></li>
+					<li><a href = "index.html">Contact</a></li>
+					<li><a href = "01_login_real.php">Account</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="content_1"><!-- Holds the main page content -->
+			<div class="section3"><!-- Holds the main page connect -->
+				<h1>All the song upload in this playlist.Total duration of playlist:</h1>
+			</div>
+		</div>
+		<div class="content_2">
+			<h1>PlayList</h1>
+		</div>
+		<div class="content_3">
+			<Space></Space>
+			<h3>Title</h3>
+			<h3>Album</h3>
+			<h3>Artist</h3>
+			<h3>Genre</h3>
+			<h3>Duration</h3>
+			<h3>Size</h3>				
+			<?php
+				require "musicdatabase_database_mysqli.php";
+					
+				$query = ("SELECT s.`Title`, GROUP_CONCAT(DISTINCT a.`Artist` 
+				ORDER BY a.`Artist` DESC SEPARATOR ', ') AS 'Artist', 
+				GROUP_CONCAT(DISTINCT g.`Genre` SEPARATOR ', ') AS 'Genre', 
+				GROUP_CONCAT(DISTINCT al.`Album` SEPARATOR ', ') AS 'Album', s.`Duration`, s.`Size`
+				FROM `Song` AS s
+				JOIN Album AS al ON al.`Album_ID` = s.`Album_ID`
+				JOIN Song_to_Genre AS stg ON stg.`Song_ID` = s.`Song_ID`
+				JOIN Genre AS g ON g.`Genre_ID` = stg.`Genre_ID`
+				JOIN Song_to_Artist AS sta ON sta.`Song_ID` = s.`Song_ID`
+				JOIN Artist AS a ON a.`Artist_ID` = sta.`Artist_ID`
+				GROUP BY s.Title, s.Duration, s.Size
+				ORDER BY s.`Title` DESC");
+				$result = mysqli_query($conn,$query);
+					
+				while($output = mysqli_fetch_array($result))
+					{
+			?>
+				<Space></Space>
+				<h3> <p class="white"><?php echo $output['Title'];?></p></h3>
+				<h3><p class="white"><?php echo $output['Album']; ?></p></h3>
+				<h3><p class="white"><?php echo $output['Artist']; ?></p></h3>
+				<h3><p class="white"><?php echo $output['Genre']; ?></p></h3>
+				<h3> <p class="white"><?php echo $output['Duration'];?></p></h3>
+				<h3> <p class="white"><?php echo $output['Size'];?></p></h3>
+				<?php
+				// Closes the output while loop
+				}
+				?>
+		</div>
+		<div class = "footer">&copy; Copyright Tony Nguyen 2021</div>
+	</div>
+</body>
+</html>
