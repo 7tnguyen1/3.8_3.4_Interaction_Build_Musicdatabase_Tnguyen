@@ -200,7 +200,7 @@ ul li:hover #a{
 .content_4{
 	width: 100%;
 	display: grid;
-    grid-gap: 2%;
+	grid-gap: 2%;
 	grid-template-columns: 6% 14% 14% 14.5% 16% 10.5% 12%;
 	overflow:scroll;	
 	overflow-x:scroll;
