@@ -27,13 +27,13 @@
 	<div class ="grid-container">
 		<!-- The div for nav and in the div it contain the logo and a function to called the nav -->
 		<div class="navigation">
+			<!-- Set a div that contain logo for the music database -->
 			<div class="logo">
-				<!-- Set a div that contain logo for the music database -->
 				<a href = "#"><img src = "images/logo8.png" height = "100"></a>
 			</div>
 			<?php
-				//Pulls the links from the nav_admin.php page and places them in the navigation div
-				require 'nav_admin.php'; //'require' is 100% needed for the site to run 
+				//Pulls the links from the nav_normal.php page and places them in the navigation div
+				require 'nav_normal.php'; //'require' is 100% needed for the site to run 
 			?>
 		</div>
 		<!-- Div that holds the banner -->
@@ -50,7 +50,8 @@
 				require "musicdatabase_database_mysqli.php";
 					
 				$query = ("SELECT SEC_TO_TIME(SUM(s.`Duration`)) AS 'Total time'
-				FROM `Song` AS s");
+				FROM `Song` AS s
+				");
 				$result = mysqli_query($conn,$query);
 					
 				while($output = mysqli_fetch_array($result))
@@ -71,14 +72,14 @@
 			<h3>Artist</h3>
 			<h3>Genre</h3>
 			<h3>Duration</h3>
-			<h3>Size</h3>
+			<h3>Size</h3>				
 		</div>
 		<div class="content_4">
 			<?php
 				//Called up all data to display in the page and information of each column is place underneath their title
 				require "musicdatabase_database_mysqli.php";
 					
-				$query = ("SELECT s.`Title`, GROUP_CONCAT(DISTINCT g.`Genre`  SEPARATOR ', ') AS 'Genre',
+				$query = ("SELECT s.`Title`, GROUP_CONCAT(DISTINCT g.`Genre` SEPARATOR ', ') AS 'Genre',
 				GROUP_CONCAT(DISTINCT a.`Artist` SEPARATOR ', ') AS 'Artist',
 				GROUP_CONCAT(DISTINCT al.`Album` SEPARATOR ', ') AS 'Album', s.`Duration`, s.`Size`
 				FROM `Song` AS s
