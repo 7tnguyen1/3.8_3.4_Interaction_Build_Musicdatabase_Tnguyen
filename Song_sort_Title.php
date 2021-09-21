@@ -1,7 +1,17 @@
+<?php
+		session_start();
+		if(!isset($_SESSION['login_user'])){
+				header("location:login.php");
+				}
+		else{
+			$User = $_SESSION['login_user'];
+		}
+?>
+
 <!DOCTYPE html>
 <html lang = "en">
 	<head>
-		<title>Layout1Musicplay</title>
+		<title>Sort for query1</title>
 		<meta chrset="utf-8"/>
 		<meta name="Keywords" content = "html5, layout, CSS Grid System"/>
 		<meta name = "Author" content = "Tony Nguyen"/>
@@ -13,26 +23,39 @@
 	</head>
 <body>
 	<div class ="grid-container">
-		<div class="img_1">
-			<img src = "images/img.png">
-		</div>
 		<div class="navigation">
-			<nav>
-				<ul>
-					<li><a href = "index.html">Home</a></li>
-					<li><a href = "index.html">Music Play</a></li>
-					<li><a href = "index.html">Contact</a></li>
-					<li><a href = "01_login_real.php">Account</a></li>
-				</ul>
-			</nav>
+			<div class="logo">
+				<a href = "homepage.php"><img src = "images/logo8.png" height = "100"></a>
+			</div>
+			<?php
+				//Pulls the links from the nav.php page and places them in the navigation div
+				require 'nav_normal.php'; //'require' is 100% needed for the site to run 
+			?>
+		</div>
+		<div class="img_1">
+			<img src = "images/banner.jpg">
+		</div>
+		<div class="content_2">
+			<img src = "images/img.png">
 		</div>
 		<div class="content_1"><!-- Holds the main page content -->
 			<div class="section3"><!-- Holds the main page connect -->
-				<h1>All the song upload in this playlist.Total duration of playlist:</h1>
+				<?php
+				require "musicdatabase_database_mysqli.php";
+					
+				$query = ("SELECT SEC_TO_TIME(SUM(s.`Duration`)) AS 'Total time'
+				FROM `Song` AS s");
+				$result = mysqli_query($conn,$query);
+					
+				while($output = mysqli_fetch_array($result))
+					{
+				?>
+				<h1>All the song upload in this playlist.Total duration of playlist:<?php echo $output['Total time'];?></h1>
+				<?php
+				// Closes the output while loop
+				}
+				?>
 			</div>
-		</div>
-		<div class="content_2">
-			<h1>PlayList</h1>
 		</div>
 		<div class="content_3">
 			<Space></Space>
@@ -61,7 +84,7 @@
 					
 				while($output = mysqli_fetch_array($result))
 					{
-			?>
+				?>
 				<Space></Space>
 				<h3> <p class="white"><?php echo $output['Title'];?></p></h3>
 				<h3><p class="white"><?php echo $output['Album']; ?></p></h3>
