@@ -19,7 +19,7 @@
 		<meta name = "Description" content = "Music database"/>
 		<meta name = "viewport" content = "width=device-width. initial-scale=1"/>
 		<!--Connected to css -->
-		<link rel ="stylesheet" href = "style2.css"> 
+		<link rel ="stylesheet" href = "test12.css"> 
 		
 	</head>
 <body>
@@ -38,7 +38,7 @@
 		</div>
 		<!-- Div that holds the banner -->
 		<div class="img_1">
-			<img src = "images/banner.jpg">
+			<img src = "images/music-1106439_1280.jpg">
 		</div>
 		<div class="content_2">
 			<img src = "images/ab.jpg">
