@@ -1,4 +1,5 @@
 <?php
+		// Deliver to login page if access to this page with out login
 		session_start();
 		if(!isset($_SESSION['login_user'])){
 				header("location:login.php");
@@ -11,36 +12,41 @@
 <!DOCTYPE html>
 <html lang = "en">
 	<head>
-		<title>Sort for query1</title>
+		<title>Sort By Title</title>
 		<meta chrset="utf-8"/>
-		<meta name="Keywords" content = "html5, layout, CSS Grid System"/>
+		<meta name="Keywords" content = "html5"/>
 		<meta name = "Author" content = "Tony Nguyen"/>
-		<meta name = "Description" content = "CSS Grid System Layout Tutorial"/>
+		<meta name = "Description" content = "Music database"/>
 		<meta name = "viewport" content = "width=device-width. initial-scale=1"/>
-		
-		<link rel ="stylesheet" href = "test8.css"> 
+		<!--Connected to css -->
+		<link rel ="stylesheet" href = "test12.css"> 
 		
 	</head>
 <body>
+	<!--Set grid system for the page -->
 	<div class ="grid-container">
+		<!-- The div for nav and in the div it contain the logo and a function to called the nav -->
 		<div class="navigation">
+			<!-- Set a div that contain logo for the music database -->
 			<div class="logo">
-				<a href = "homepage.php"><img src = "images/logo8.png" height = "100"></a>
+				<a href = "#"><img src = "images/logo8.png" height = "100"></a>
 			</div>
 			<?php
-				//Pulls the links from the nav.php page and places them in the navigation div
+				//Pulls the links from the nav_normal.php page and places them in the navigation div
 				require 'nav_normal.php'; //'require' is 100% needed for the site to run 
 			?>
 		</div>
+		<!-- Div that holds the banner -->
 		<div class="img_1">
 			<img src = "images/banner.jpg">
 		</div>
 		<div class="content_2">
-			<img src = "images/img.png">
+			<img src = "images/ab.jpg">
 		</div>
-		<div class="content_1"><!-- Holds the main page content -->
-			<div class="section3"><!-- Holds the main page connect -->
+		<div class="content_1"><!-- Hold the total duration -->
+			<div class="section3">
 				<?php
+				// Called up the query for it to display the total duration of all song.
 				require "musicdatabase_database_mysqli.php";
 					
 				$query = ("SELECT SEC_TO_TIME(SUM(s.`Duration`)) AS 'Total time'
@@ -57,6 +63,7 @@
 				?>
 			</div>
 		</div>
+		<!-- Column that contain the name of what is display -->
 		<div class="content_3">
 			<Space></Space>
 			<h3>Title</h3>
@@ -64,8 +71,11 @@
 			<h3>Artist</h3>
 			<h3>Genre</h3>
 			<h3>Duration</h3>
-			<h3>Size</h3>				
+			<h3>Size</h3>
+		</div>
+		<div class="content_4">
 			<?php
+				//Called up all data to display in the page and information of each column is place underneath their title
 				require "musicdatabase_database_mysqli.php";
 					
 				$query = ("SELECT s.`Title`, GROUP_CONCAT(DISTINCT a.`Artist` 
@@ -97,6 +107,7 @@
 				}
 				?>
 		</div>
+		<!--Footer for the music database -->
 		<div class = "footer">&copy; Copyright Tony Nguyen 2021</div>
 	</div>
 </body>
