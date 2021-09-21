@@ -12,7 +12,7 @@
 <!DOCTYPE html>
 <html lang = "en">
 	<head>
-		<title>Sort for query1</title>
+		<title>Sort By Title</title>
 		<meta chrset="utf-8"/>
 		<meta name="Keywords" content = "html5"/>
 		<meta name = "Author" content = "Tony Nguyen"/>
