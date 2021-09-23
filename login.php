@@ -79,7 +79,7 @@ ob_end_flush();
 		</div>
 		<!--Div for the image -->
 		<div class="img_2">
-			<img src = "images/music-1106439_1280.jpg">
+			<img src = "images/background2.jpg">
 		</div>
 		<!--Footer for the music database -->
 		<div class = "footer">&copy; Copyright Tony Nguyen 2021</div>
