@@ -47,7 +47,7 @@
 					}
 				else
 					{
-					echo "<p class = 'error'>Error Updated record:</p>";
+					echo "<p class = 'error'>Error Updated Fail:</p>";
 					}
 				}
 				?>
