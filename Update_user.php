@@ -43,11 +43,11 @@
 				$updatequery = "UPDATE User SET Password = '".$New_Password."' WHERE User = '".$User_ID."'";
 				if (mysqli_query($conn,$updatequery))
 					{
-					echo "<p class = 'Connected'>Record inserted:</p>";
+					echo "<p class = 'Connected'>Record Updated:</p>";
 					}
 				else
 					{
-					echo "<p class = 'error'>Error inserting record:</p>";
+					echo "<p class = 'error'>Error Updated record:</p>";
 					}
 				}
 				?>
