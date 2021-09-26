@@ -68,17 +68,6 @@ ul li ul{
 	z-index: 5;
 }
 
-ul li #a{
-	padding: 0;
-	position: absolute;
-	top: 58px;
-	width: 100px;
-	display: none;
-	visibility: hidden;
-	z-index: 5;
-}
-
-	
 ul li ul li{
 	background-color:  #0C59CF;
 	display: block;
@@ -87,11 +76,6 @@ ul li ul li{
 ul li ul li:hover{background: black;}
 
 ul li:hover ul{
-	display: block;
-	visibility: visible;
-}
-
-ul li:hover #a{
 	display: block;
 	visibility: visible;
 }
