@@ -8,7 +8,7 @@
 		<meta name = "Description" content = "Music database"/>
 		<meta name = "viewport" content = "width=device-width. initial-scale=1"/>
 		<!--Connected to css -->
-		<link rel ="stylesheet" href = "style.css"> 
+		<link rel ="stylesheet" href = "test12.css"> 
 		
 	</head>
 <body>
@@ -26,8 +26,8 @@
 			?>
 		</div>
 		<div class="content"><!-- Holds the signup form -->
-			<p>Welcome to Music MP3</p>
-			<h3><form method = "post" id = "01_login">
+			<p>Sign Up</p>
+			<h3><form method = "post">
 			<input id="us" type = "text" name = "username" placeholder="User name"/><br />
 			<input id="pa" type = 'password' name = 'password' placeholder="Password"/><br />
 			<input  id="login" type = "submit" value = "SignUp"/><br />
@@ -55,7 +55,7 @@
 		</div>
 		<!--Div for the image -->
 		<div class="img_2">
-			<img src = "images/img2.jpg">
+			<img src = "images/music-1106439_1280.jpg">
 		</div>
 		<!--Footer for the music database -->
 		<div class = "footer">&copy; Copyright Tony Nguyen 2021</div>
