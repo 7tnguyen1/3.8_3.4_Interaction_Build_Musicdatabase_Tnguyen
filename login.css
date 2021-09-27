@@ -22,7 +22,7 @@ body{
 
 nav{
 	width:100%;
-	background-color:white;
+	background-color:#C8A2C8;
 	overflow:auto;
 }
 
@@ -88,7 +88,7 @@ ul li ul{
 }
 /* Set up the footer */
 .footer{
-	background-color: white;
+	background-color: #C8A2C8;
 	grid-column-start: 1;
 	grid-column-end: span 4;
 	text-align: center;
@@ -152,6 +152,11 @@ p{
   	top: 240px;
 }
 
+a{
+	color:black;
+	font-size:18px;
+	text-decoration:none;
+}
 
 #update{
 	color:black;
@@ -159,3 +164,13 @@ p{
 	text-decoration:none;
 }
 
+.a{
+	color:black;
+	font-size:12px;
+	text-decoration:none;
+}
+
+#er{
+	left:0px;
+	font-size:14px;
+}
