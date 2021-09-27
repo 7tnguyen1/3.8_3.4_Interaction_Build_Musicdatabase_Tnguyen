@@ -1,3 +1,7 @@
+/* Import  font from google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
 body{
 	margin:0;
 	padding:0;
@@ -20,19 +24,21 @@ body{
 
 nav{
 	width:100%;
-	background:white;
+	background-color:#0C59CF;
 	overflow:auto;
+	
 }
 
 ul{
 	padding:0;
-	margin:0 0 0 150px;
+	margin:0 0 0 30px;
 	list-style: none;
 }
 
 li{
-	float:left;
+	float:right;
 }
+
 
 
 nav a{
@@ -40,13 +46,14 @@ nav a{
 	width:100px;
 	padding: 20px 15px;
 	text-decoration:none;
-	font-family:Arial;
-	color:black;
+	font-family: 'Open Sans', sans-serif;
+	font-weight:bold;
+	color:white;
 	text-align: center;
 }
 
 nav a:hover{
-	background:purple;
+	background:black;
 	transition:0.5s;
 }
 
@@ -54,21 +61,20 @@ ul li ul{
 	padding: 0;
 	position: absolute;
 	top: 58px;
-	left: 130px;
 	width: 100px;
 	display: none;
 	visibility: hidden;
-	z-index: 1;
-}
-	
-ul li ul li{
-	background-color: purple;
-	display: block;
-	
-	
+	z-index: 5;
 }
 
-ul li ul li:hover{background: black}
+
+	
+ul li ul li{
+	background-color:  #0C59CF;
+	display: block;
+}
+
+ul li ul li:hover{background: black;}
 
 ul li:hover ul{
 	display: block;
@@ -100,6 +106,8 @@ ul li:hover ul{
 	text-align: center;
 	color:white;
 	height:50px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight:300;
 }
 
 .content_1{
@@ -116,13 +124,16 @@ ul li:hover ul{
 .content_1 p{
 	font-size:16px;
 	color:black;
+	font-family: 'Open Sans', sans-serif;
+	font-weight:300;
 }
 
 .content_1 h1{
 	font-size:24px;
-	color:black;
+	color:#0C59CF;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight:600;
 }
-
 
 .content_4{
 	grid-column-start: 1;
@@ -144,54 +155,212 @@ ul li:hover ul{
 	height:214px;
 	background-color:white;
 	margin-top:50px;
+	position: relative;
+    width: 100%;
+}
+
+.images1 img{
+	height:214px;
+	margin-left:25px;
 }
 
 .images2{
 	height:214px;
 	background-color:white;
 	margin-top:50px;
+	position: relative;
+    width: 100%;
+}
+
+.images2 img{
+	height:214px;
+	margin-left:25px;	
 }
 
 .images3{
 	height:214px;
 	background-color:white;
 	margin-top:50px;
+	position: relative;
+    width: 100%;
+}
+
+.images3 img{
+	height:214px;
+	margin-left:25px;
 }
 
 .images4{
 	height:214px;
 	background-color:white;
 	margin-top:50px;
-
+	position: relative;
+    width: 100%;
 }
 
+.images4 img{
+	height:214px;
+	margin-left:25px;
+}
 
 .images5{
 	height:214px;
 	background-color:white;
 	margin-top:50px;
+	position: relative;
+    width: 100%;
+}
+
+.images5 img{
+	height:214px;
+	margin-left:25px;
 }
 
 .images6{
 	height:214px;
 	background-color:white;
 	margin-top:50px;
+	position: relative;
+    width: 100%;
+}
+
+.images6 img{
+	height:214px;
+	margin-left:25px;
 }
 
 .images7{
 	height:214px;
 	background-color:white;
 	margin-top:50px;
+	position: relative;
+    width: 100%;
+}
+
+.images7 img{
+	height:214px;
+	margin-left:25px;
 }
 
 .images8{
 	height:214px;
 	background-color:white;
 	margin-top:50px;
+	position: relative;
+    width: 100%;
+}
+
+.images8 img{
+	height:214px;
+	margin-left:25px;
+}
+
+
+
+.image1 {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.image2 {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.image3 {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.image4 {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.image5 {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.image6 {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.image7 {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.image8 {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+.overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	transition: .5s ease;
+	background-color: black;
+	margin-left:25px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight:300;
+	text-decoration:none;
+	color:white;
+}
+
+.images1:hover .overlay {
+	opacity: 1;
 	
 }
 
-.content_4 img{
-	margin-left:25px;
-	border: 2px solid black;
+.images2:hover .overlay {
+  opacity: 1;
+}
+
+.images3:hover .overlay {
+  opacity: 1;
+}
+
+.images4:hover .overlay {
+  opacity: 1;
+}
+
+.images5:hover .overlay {
+  opacity: 1;
+}
+
+.images6:hover .overlay {
+  opacity: 1;
+}
+.images7:hover .overlay {
+  opacity: 1;
+}
+.images8:hover .overlay {
+  opacity: 1;
+}
+.text {
+	font-size: 20px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	text-align: center;
 }
