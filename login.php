@@ -59,7 +59,7 @@ ob_end_flush();
 		<div class="navigation">
 			<!-- Set a div that contain logo for the music database -->
 			<div class="logo">
-				<a href = "#"><img src = "images/logo_test1.png" height = "100"></a>
+				<a href = "#"><img src = "images/logo_test2.png" height = "100"></a>
 			</div>
 			<?php
 				//Pulls the links from the nav_login.php page and places them in the navigation div
