@@ -67,7 +67,6 @@ ul li ul{
 	z-index: 5;
 }
 
-
 	
 ul li ul li{
 	background-color:  #0C59CF;
@@ -363,4 +362,11 @@ ul li:hover ul{
 	-ms-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 	text-align: center;
+}
+
+.text a{
+	font-family: 'Open Sans', sans-serif;
+	font-weight:300;
+	text-decoration:none;
+	color:white;
 }
