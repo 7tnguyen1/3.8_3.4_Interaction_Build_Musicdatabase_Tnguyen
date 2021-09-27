@@ -33,7 +33,7 @@
 			</nav>
 		</div>
 		<div class="img_1">
-			<img src = "images/banner.jpg">
+			<img src = "images/img.png">
 		</div>
 		<div class="content_1"><!-- Holds the main page content -->
 			<h1>Welcome to MUSIC MP3</h1>
