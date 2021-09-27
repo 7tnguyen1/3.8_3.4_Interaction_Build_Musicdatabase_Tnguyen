@@ -1,3 +1,6 @@
+/* Import  font from google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+
 body{
 	margin:0;
 	padding:0;
@@ -47,7 +50,8 @@ nav a{
 	width:100px;
 	padding: 20px 15px;
 	text-decoration:none;
-	font-family:Arial;
+	font-family: 'Roboto', sans-serif;
+	font-weight:300;
 	color:white;
 	text-align: center;
 }
@@ -107,13 +111,15 @@ ul li:hover ul{
 }
 /* Set up the footer */
 .footer{
-	background-color:#0C59CF;
+	background-color: #0C59CF;
 	grid-column-start: 1;
 	grid-column-end: span 4;
 	text-align: center;
 	height:35px;
 	color:white;
 	padding-top:20px;
+	font-family: 'Roboto', sans-serif;
+	font-weight:300;
 }
 
 
@@ -130,17 +136,24 @@ p{
 	margin-top:250px;
 	font-size:24px;
 	color:#0C59CF;
-	font-weight:bold;
+	font-family: 'Roboto', sans-serif;
+	font-weight:500;
 }
 
 #us{
 	height:30px;
 	width: 240px;
+	font-family: 'Roboto', sans-serif;
+	font-weight:300;
+
 }
 
 #pa{
 	height:30px;
 	width: 240px;
+	font-family: 'Roboto', sans-serif;
+	font-weight:300;
+
 }
 
 /* Set up the login buttom*/
@@ -149,7 +162,9 @@ p{
 	width: 80px;
 	color:white;
 	background-color:#0C59CF;
-	
+	font-family: 'Roboto', sans-serif;
+	font-weight:300;
+
 }
 
 /* Set up the text display correct*/
@@ -160,6 +175,8 @@ p{
 	position: absolute;
   	top: 230px;
 	left:0px;
+	font-family: 'Roboto', sans-serif;
+	font-weight:300;
 }
 
 /* Set up the text display error*/
@@ -171,8 +188,15 @@ p{
   	top: 240px;
 }
 
+
 #update{
 	color:black;
 	font-size:14px;
 	text-decoration:none;
+	font-family: 'Roboto', sans-serif;
+	font-weight:300;
+}
+
+#update:hover{
+	color:#0C59CF;
 }
