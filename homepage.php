@@ -14,7 +14,7 @@
 <body>
 	<div class ="grid-container">
 		<div class="img_1">
-			<img src = "images/banner.jpg">
+			<img src = "images/img.png">
 		</div>
 		<div class="navigation">
 			<div class="logo">
