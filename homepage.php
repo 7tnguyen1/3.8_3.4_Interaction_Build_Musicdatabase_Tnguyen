@@ -13,9 +13,6 @@
 	</head>
 <body>
 	<div class ="grid-container">
-		<div class="img_1">
-			<img src = "images/img.png">
-		</div>
 		<div class="navigation">
 			<div class="logo">
 				<a href = "homepage.php"><img src = "images/logo8.png" height = "100"></a>
@@ -35,15 +32,41 @@
 				</ul>
 			</nav>
 		</div>
-		<div class="content_1"><!-- Holds the Welcome and introduction about the page -->
+		<div class="img_1">
+			<img src = "images/img.png">
+		</div>
+		<div class="content_1"><!-- Holds the main page content -->
 			<h1>Welcome to MUSIC MP3</h1>
 			<p>MUSIC MP3 is a free music player application. With a high-quality music store, you will have a great music experience.</p>
 			<p>Digital music service with millions of high quality copyrighted songs , helping you listen to music, download music, upload and sync my music store on multiple devices.</p>
 		</div>
-		<div class="content_2"><!-- Holds the About Us information -->
-			<h1>About Us</h1>
-			<p>MUSIC MP3 is a free music player application. With a high-quality music store, you will have a great music experience.</p>
-			<p>Digital music service with millions of high quality copyrighted songs , helping you listen to music, download music, upload and sync my music store on multiple devices.</p>
+		<div class="content_4">
+			<Space></Space>
+			<div class="images1">
+				<a href = "#"><img src = "images/img.png"></a>
+			</div>
+			<div class="images2">
+				<a href = "#"><img src = "images/img.png"></a>
+			</div>
+			<div class="images3">
+				<a href = "#"><img src = "images/img.png"></a>
+			</div>
+			<div class="images4">
+				<a href = "#"><img src = "images/img.png"></a>
+			</div>
+			<Space></Space>
+			<div class="images5">
+				<a href = "#"><img src = "images/img.png"></a>
+			</div>
+			<div class="images6">
+				<a href = "#"><img src = "images/img.png"></a>
+			</div>
+			<div class="images7">
+				<a href = "#"><img src = "images/img.png"></a>
+			</div>
+			<div class="images8">
+				<a href = "#"><img src = "images/img.png"></a>
+			</div>
 		</div>
 		<div class = "footer">&copy; Copyright Tony Nguyen 2021</div>
 	</div>
