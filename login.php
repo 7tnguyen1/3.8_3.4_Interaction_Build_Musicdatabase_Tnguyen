@@ -49,7 +49,7 @@ ob_end_flush();
 		<meta name = "Description" content = "Music database"/>
 		<meta name = "viewport" content = "width=device-width. initial-scale=1"/>
 		<!-- Connect to css page -->
-		<link rel ="stylesheet" href = "style7.css"> 
+		<link rel ="stylesheet" href = "login.css"> 
 		
 	</head>
 <body>
