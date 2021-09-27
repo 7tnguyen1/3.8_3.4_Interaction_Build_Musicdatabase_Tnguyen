@@ -19,7 +19,7 @@
 		<meta name = "Description" content = "Music database"/>
 		<meta name = "viewport" content = "width=device-width. initial-scale=1"/>
 		<!--Connected to css -->
-		<link rel ="stylesheet" href = "style1.css">
+		<link rel ="stylesheet" href = "homepage.css">
 		
 	</head>
 <body>
