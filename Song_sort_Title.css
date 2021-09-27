@@ -103,7 +103,7 @@ ul li:hover ul{
 }
 
 .footer{
-	background-color: blue;
+	background-color: #0C59CF;
 	grid-column-end: span 4;
 	padding-top:25px;
 	text-align: center;
