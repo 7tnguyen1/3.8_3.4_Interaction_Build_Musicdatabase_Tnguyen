@@ -84,7 +84,7 @@ ob_end_flush();
 			<input  id="login" type = "submit" value = "login"/><br />
 			<!--This is for User that forgot their password  -->
 			<a href = "Update_user.php" id='update'>Forgot your password?</a>
-			<p class = "error" id="er"><?php echo $error; ?></p>
+			<p class = "error"><?php echo $error; ?></p>
 			</form></h3>
 		</div>
 		<!--Div for the image -->
