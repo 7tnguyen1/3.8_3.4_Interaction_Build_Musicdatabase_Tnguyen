@@ -67,6 +67,8 @@ ul li ul{
 	visibility: hidden;
 	z-index: 5;
 }
+
+
 	
 ul li ul li{
 	background-color:  #0C59CF;
@@ -101,7 +103,7 @@ ul li:hover ul{
 }
 
 .footer{
-	background-color: #0C59CF;
+	background-color: blue;
 	grid-column-end: span 4;
 	padding-top:25px;
 	text-align: center;
