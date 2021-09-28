@@ -186,6 +186,9 @@ p{
 	font-weight: bold;
 	position: absolute;
   	top: 240px;
+	left:0px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight:300;
 }
 
 
