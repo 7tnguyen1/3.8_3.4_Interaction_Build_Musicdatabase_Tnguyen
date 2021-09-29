@@ -15,7 +15,7 @@
 	<div class ="grid-container">
 		<div class="navigation">
 			<div class="logo">
-				<a href = "homepage.php"><img src = "images/logo8.png" height = "100"></a>
+				<a href = "#"><img src = "images/logo8.png" height = "100"></a>
 			</div>
 			<nav>
 				<ul>
