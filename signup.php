@@ -18,7 +18,7 @@
 		<div class="navigation">
 			<!-- Set a div that contain logo for the music database -->
 			<div class="logo">
-				<a href = "01_login_real.php"><img src = "images/logo8.png" height = "100"></a>
+				<a href = "homepage.php"><img src = "images/logo8.png" height = "100"></a>
 			</div>
 			<?php
 				//Pulls the links from the nav_login.php page and places them in the navigation div
