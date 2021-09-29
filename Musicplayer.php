@@ -32,8 +32,8 @@
 				<a href = "#"><img src = "images/logo8.png" height = "100"></a>
 			</div>
 			<?php
-				//Pulls the links from the nav_normal.php page and places them in the navigation div
-				require 'nav_normal.php'; //'require' is 100% needed for the site to run 
+				//Pulls the links from the nav_admin.php page and places them in the navigation div
+				require 'nav_admin.php'; //'require' is 100% needed for the site to run 
 			?>
 		</div>
 		<!-- Div that holds the banner -->
