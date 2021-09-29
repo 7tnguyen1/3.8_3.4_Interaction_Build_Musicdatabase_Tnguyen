@@ -29,7 +29,7 @@
 		<div class="navigation">
 			<!-- Set a div that contain logo for the music database -->
 			<div class="logo">
-				<a href = "#"><img src = "images/logo8.png" height = "100"></a>
+				<a href = "homepage.php"><img src = "images/logo8.png" height = "100"></a>
 			</div>
 			<?php
 				//Pulls the links from the nav_admin.php page and places them in the navigation div
