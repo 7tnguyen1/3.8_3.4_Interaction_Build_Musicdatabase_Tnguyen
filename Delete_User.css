@@ -69,6 +69,8 @@ ul li ul{
 	visibility: hidden;
 	z-index: 5;
 }
+
+
 	
 ul li ul li{
 	background-color:  #0C59CF;
@@ -81,6 +83,7 @@ ul li:hover ul{
 	display: block;
 	visibility: visible;
 }
+
 
 /* Set up position for the logo */
 .logo img{
@@ -180,9 +183,8 @@ p{
 .error{
 	font-size:18px;
 	color:red;
-	font-weight: bold;
+	font-weight: 300;
 	position: absolute;
   	top: 240px;
 	font-family: 'Open Sans', sans-serif;
-	font-weight:300;
 }
