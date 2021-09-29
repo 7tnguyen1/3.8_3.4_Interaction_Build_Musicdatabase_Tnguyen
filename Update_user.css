@@ -184,6 +184,7 @@ p{
 	font-weight: bold;
 	position: absolute;
   	top: 240px;
+	left:0px;
 }
 
 a{
@@ -208,12 +209,4 @@ a{
 	color:black;
 	font-size:12px;
 	text-decoration:none;
-}
-
-#er{
-	left:0px;
-	font-size:18px;
-	font-family: 'Open Sans', sans-serif;
-	font-weight:300;
-	left:0px;
 }
