@@ -102,7 +102,7 @@
 				<a href = "Query5.php"><img src = "images/Dance.jpg" class="image8"></a>
 				<!--Div for overlay techniques so that when the user hover it hide the images and display text -->
 				<div class="overlay">
-    				<div class="text"><a href = "Query5_admin">Dance</a></div>
+    				<div class="text"><a href = "Query5_admin.php">Dance</a></div>
   				</div>
 			</div>
 		</div>
