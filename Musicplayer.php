@@ -1,57 +1,81 @@
+<?php
+		// Deliver to login page if access to this page with out login
+		session_start();
+		if(!isset($_SESSION['login_user'])){
+				header("location:login.php");
+				}
+		else{
+			$User = $_SESSION['login_user'];
+		}
+?>
+
 <!DOCTYPE html>
 <html lang = "en">
 	<head>
-		<title> Muiscplaypage</title>
+		<title> Music player</title>
 		<meta chrset="utf-8"/>
-		<meta name="Keywords" content = "html5, layout, CSS Grid System"/>
+		<meta name="Keywords" content = "html5"/>
 		<meta name = "Author" content = "Tony Nguyen"/>
-		<meta name = "Description" content = "CSS Grid System Layout Tutorial"/>
+		<meta name = "Description" content = "Music database"/>
 		<meta name = "viewport" content = "width=device-width. initial-scale=1"/>
-		
+		<!--Connected to css -->
 		<link rel ="stylesheet" href = "Musicplayer.css"> 
 		
 	</head>
 <body>
+	<!--Set for grid system for the page -->
 	<div class ="grid-container">
+		<!-- The div for nav and in the div it contain the logo and a function to called the nav -->
 		<div class="navigation">
+			<!-- Set a div that contain logo for the music database -->
 			<div class="logo">
 				<a href = "#"><img src = "images/logo8.png" height = "100"></a>
 			</div>
-			<nav>
-				<ul>
-					<li><a href = "homepage.php">Home</a></li>
-					<li><a href = "musicplayer.php">Music Play</a>
-						<ul>
-							<li><a href= "Query1.php">Query1</a></li>
-							<li><a href= "Query2.php">Query2</a></li>
-						</ul>
-					</li>
-					<li><a href = "login.php">Contact</a></li>
-					<li><a href = "login.php">LoginOut</a></li>
-					<li><a href = "signup.php">SignUp</a></li>
-				</ul>
-			</nav>
+			<?php
+				//Pulls the links from the nav_normal.php page and places them in the navigation div
+				require 'nav_normal.php'; //'require' is 100% needed for the site to run 
+			?>
 		</div>
-		
 		<!-- Div that holds the banner -->
 		<div class="img_1">
-			<img src = "images/img.png">
+			<img src = "images/music-1106439_1280.jpg">
 		</div>
 		<div class="content_2">
-			<img src = "images/img.png">
+			<img src = "images/ab.jpg">
 		</div>
-		<div class="content_1"><!-- Holds the main page content -->
-			<h1>All the song upload in this playlist.Total duration of playlist:</h1>
-		</div>	
-		<div class="content_4">
+		<div class="content_1"><!-- Hold the total duration -->
+			<div class="section3">
+				<?php
+				// Called up the query for it to display the total duration of all song.
+				require "musicdatabase_database_mysqli.php";
+					
+				$query = ("SELECT SEC_TO_TIME(SUM(s.`Duration`)) AS 'Total time'
+				FROM `Song` AS s");
+				$result = mysqli_query($conn,$query);
+					
+				while($output = mysqli_fetch_array($result))
+					{
+				?>
+				<h1>All the song upload in this playlist.Total duration of playlist:<?php echo $output['Total time'];?></h1>
+				<?php
+				// Closes the output while loop
+				}
+				?>
+			</div>
+		</div>
+		<!-- Column that contain the name of what is display -->
+		<div class="content_3">
 			<Space></Space>
 			<h3>Title</h3>
 			<h3>Album</h3>
 			<h3>Artist</h3>
 			<h3>Genre</h3>
 			<h3>Duration</h3>
-			<h3>Size</h3>				
+			<h3>Size</h3>
+		</div>
+		<div class="content_4">
 			<?php
+			//Called up all data to display in the page and information of each column is place underneath their title
 				require "musicdatabase_database_mysqli.php";
 					
 				$query = ("SELECT s.`Title`, GROUP_CONCAT(DISTINCT a.`Artist` 
@@ -83,6 +107,7 @@
 				}
 				?>
 		</div>
+		<!--Footer for the music database -->
 		<div class = "footer">&copy; Copyright Tony Nguyen 2021</div>
 	</div>
 </body>
