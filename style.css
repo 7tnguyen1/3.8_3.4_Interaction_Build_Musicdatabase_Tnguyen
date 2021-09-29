@@ -177,14 +177,16 @@ p{
   	top: 240px;
 	font-family: 'Open Sans', sans-serif;
 	font-weight:300;
+	left:0px;
 }
 
 /* Set up the text display error*/
 .error{
 	font-size:18px;
 	color:red;
-	font-weight: 300;
+	font-weight: bold;
 	position: absolute;
   	top: 240px;
 	font-family: 'Open Sans', sans-serif;
+	left:0px;
 }
